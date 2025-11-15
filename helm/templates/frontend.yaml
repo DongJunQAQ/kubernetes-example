@@ -23,11 +23,17 @@ spec:
         - containerPort: 3000
         resources:
           requests:
-            memory: "128Mi"
-            cpu: "128m"
+            # memory: "128Mi"
+            # cpu: "128m"
+            # 经测试这里要提高requests值否则会导致前端容器一直扩容
+            memory: "512Mi"
+            cpu: "512m"
           limits:
-            memory: "256Mi"
-            cpu: "256m"
+            # memory: "256Mi"
+            # cpu: "256m"
+            # 由于requests值的改动所以limits值也需要跟着改动
+            memory: "1024Mi"
+            cpu: "1024m"
 ---
 apiVersion: v1
 kind: Service
