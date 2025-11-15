@@ -1,11 +1,13 @@
 frontend:
   image: lyzhang1999/frontend
-  tag: '1276e23'
+  # tag: '1276e23'
+  tag: 'latest'  # 之前的镜像会出现问题，这里使用最新版本的镜像
   autoscaling:
     averageUtilization: 90
 backend:
   image: lyzhang1999/backend
-  tag: '1276e23'
+  # tag: '1276e23'
+  tag: 'latest'
   autoscaling:
     averageUtilization: 90
 database:
